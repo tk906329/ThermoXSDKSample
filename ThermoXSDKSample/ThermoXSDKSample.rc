@@ -1,0 +1,707 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\ThermalImager.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_LOG DIALOGEX 0, 0, 318, 50
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "运行日志"
+FONT 10, "宋体", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_LOG,1,1,315,47,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL,WS_EX_DLGMODALFRAME
+END
+
+IDD_DIALOG_RUNSTATUS DIALOGEX 0, 0, 319, 134
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "运行数据"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "机器人网络连接:未连接",IDC_STATIC_ROBOT_NETWORK,13,13,84,8
+    LTEXT           "最高温度:",IDC_STATIC_INFO1,13,43,104,8
+    LTEXT           "最高温度位置:",IDC_STATIC_INFO2,13,58,107,8
+    LTEXT           "热像仪连接:未连接",IDC_STATIC_CAMERA_NETWORK,150,13,68,8
+    LTEXT           "机器人距离值:",IDC_STATIC_INFO3,150,28,121,8
+    LTEXT           "机器人弧度值:",IDC_STATIC_INFO4,150,43,143,8
+    LTEXT           "鼠标位置:",IDC_STATIC_INFO5,13,73,107,8
+    LTEXT           "机器人A4轴:",IDC_STATIC_INFO6,150,58,107,8
+    LTEXT           "红外测距值:",IDC_STATIC_INFO7,13,88,107,8
+    LTEXT           "红外测距值:",IDC_STATIC_INFO8,150,73,107,8
+    LTEXT           "当前桶编号:",IDC_STATIC_INFO9,13,117,107,8
+    LTEXT           "当前物料高度:",IDC_STATIC_INFO10,150,89,107,8
+    LTEXT           "当前测温模式:",IDC_STATIC_INFO11,13,103,107,8
+    LTEXT           "平均温度:",IDC_STATIC_INFO12,13,28,107,8
+    LTEXT           "当前半径:",IDC_STATIC_INFO13,150,103,107,8
+END
+
+IDD_DIALOG_CALIB DIALOGEX 0, 0, 309, 394
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "系统参数"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "保存",IDOK,125,373,50,14
+    PUSHBUTTON      "取消",IDCANCEL,215,373,50,14
+    GROUPBOX        "参考点校准",IDC_STATIC,14,15,274,56
+    LTEXT           "参考点X:",IDC_STATIC,41,34,32,8
+    LTEXT           "参考点Y:",IDC_STATIC,41,51,32,8
+    EDITTEXT        IDC_EDIT1,96,31,53,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,96,50,53,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "校准参考点",IDC_BUTTON2,214,49,50,14
+    GROUPBOX        "机器人/热像仪长度转换系数标定",IDC_STATIC,13,124,274,92
+    LTEXT           "测量点X1:",IDC_STATIC,41,141,36,8
+    LTEXT           "测量点Y1:",IDC_STATIC,134,141,36,8
+    EDITTEXT        IDC_EDIT3,86,138,35,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT4,179,138,37,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "读取测量点1",IDC_BUTTON3,229,138,50,14
+    LTEXT           "请输入测量点之间的距离(mm):",IDC_STATIC,41,181,108,8
+    EDITTEXT        IDC_EDIT5,176,176,53,14,ES_AUTOHSCROLL
+    LTEXT           "长度转换系数:",IDC_STATIC,41,199,52,8
+    EDITTEXT        IDC_EDIT6,176,196,53,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "计算",IDC_BUTTON4,245,186,35,22
+    GROUPBOX        "机器人参数",IDC_STATIC,14,77,274,42
+    LTEXT           "相机与A4轴夹角:",IDC_STATIC,40,99,60,8
+    EDITTEXT        IDC_EDIT7,106,96,37,14,ES_AUTOHSCROLL
+    LTEXT           "测量点X2:",IDC_STATIC,41,160,36,8
+    LTEXT           "测量点Y2:",IDC_STATIC,133,160,36,8
+    EDITTEXT        IDC_EDIT8,85,157,35,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT11,179,157,37,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "读取测量点2",IDC_BUTTON6,229,157,50,14
+    GROUPBOX        "料桶1参数",IDC_STATIC,14,217,274,33
+    LTEXT           "a3:",IDC_STATIC,40,234,12,8
+    EDITTEXT        IDC_EDIT12,60,231,37,14,ES_AUTOHSCROLL
+    LTEXT           "基准测距值:",IDC_STATIC,164,32,49,8
+    EDITTEXT        IDC_EDIT15,225,30,53,14,ES_AUTOHSCROLL
+    LTEXT           "a2:",IDC_STATIC,100,234,12,8
+    EDITTEXT        IDC_EDIT16,120,231,37,14,ES_AUTOHSCROLL
+    LTEXT           "a1:",IDC_STATIC,160,234,12,8
+    EDITTEXT        IDC_EDIT22,180,231,37,14,ES_AUTOHSCROLL
+    LTEXT           "a0:",IDC_STATIC,220,234,12,8
+    EDITTEXT        IDC_EDIT23,240,231,37,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "设置",IDC_BUTTON5,35,373,50,14
+    GROUPBOX        "料桶2参数",IDC_STATIC,14,251,274,33
+    LTEXT           "a3:",IDC_STATIC,40,268,12,8
+    EDITTEXT        IDC_EDIT17,60,265,37,14,ES_AUTOHSCROLL
+    LTEXT           "a2:",IDC_STATIC,100,268,12,8
+    EDITTEXT        IDC_EDIT24,120,265,37,14,ES_AUTOHSCROLL
+    LTEXT           "a1:",IDC_STATIC,160,268,12,8
+    EDITTEXT        IDC_EDIT25,180,265,37,14,ES_AUTOHSCROLL
+    LTEXT           "a0:",IDC_STATIC,220,268,12,8
+    EDITTEXT        IDC_EDIT26,240,265,37,14,ES_AUTOHSCROLL
+    GROUPBOX        "检测系数",IDC_STATIC,14,286,274,48
+    LTEXT           "最小像素:",IDC_STATIC,34,301,36,8
+    EDITTEXT        IDC_EDIT20,81,299,34,14,ES_AUTOHSCROLL
+    LTEXT           "最小距离(mm):",IDC_STATIC,165,301,52,8
+    EDITTEXT        IDC_EDIT21,221,299,34,14,ES_AUTOHSCROLL
+    LTEXT           "允许误差:",IDC_STATIC,34,319,36,8
+    EDITTEXT        IDC_EDIT27,81,317,34,14,ES_AUTOHSCROLL
+    LTEXT           "小臂长度(mm):",IDC_STATIC,176,99,52,8
+    EDITTEXT        IDC_EDIT28,232,96,37,14,ES_AUTOHSCROLL
+    GROUPBOX        "测距参数",IDC_STATIC,13,337,274,33
+    LTEXT           "a1:",IDC_STATIC,35,351,12,8
+    EDITTEXT        IDC_EDIT29,65,350,37,14,ES_AUTOHSCROLL
+    LTEXT           "a0:",IDC_STATIC,189,351,12,8
+    EDITTEXT        IDC_EDIT30,215,348,37,14,ES_AUTOHSCROLL
+END
+
+IDD_DIALOG_SETTING DIALOGEX 0, 0, 329, 269
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "操作面板"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_COMBO1,72,21,90,30,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "调色板",IDC_STATIC,22,22,34,8
+    EDITTEXT        IDC_EDIT1,87,63,40,14,ES_AUTOHSCROLL
+    LTEXT           "视窗X：",IDC_STATIC,35,65,29,8
+    EDITTEXT        IDC_EDIT2,200,63,40,14,ES_AUTOHSCROLL
+    LTEXT           "视窗Width：",IDC_STATIC,148,65,44,8
+    EDITTEXT        IDC_EDIT3,87,83,40,14,ES_AUTOHSCROLL
+    LTEXT           "视窗Y：",IDC_STATIC,35,86,29,8
+    EDITTEXT        IDC_EDIT4,200,83,40,14,ES_AUTOHSCROLL
+    LTEXT           "视窗Height：",IDC_STATIC,148,86,46,8
+    PUSHBUTTON      "应用",IDC_BUTTON2,272,248,50,14
+    GROUPBOX        "显示设置",IDC_STATIC,22,43,230,62
+    GROUPBOX        "检测范围设置",IDC_STATIC,22,113,229,36
+    EDITTEXT        IDC_EDIT9,88,127,40,14,ES_AUTOHSCROLL
+    LTEXT           "温度上限：",IDC_STATIC,36,129,41,8
+    EDITTEXT        IDC_EDIT10,201,127,40,14,ES_AUTOHSCROLL
+    LTEXT           "温度下限：",IDC_STATIC,149,129,41,8
+    EDITTEXT        IDC_EDIT13,99,170,40,14,ES_AUTOHSCROLL
+    LTEXT           "下料临界温度：",IDC_STATIC,35,172,57,8
+    GROUPBOX        "工艺设置",IDC_STATIC,21,155,229,107
+    EDITTEXT        IDC_EDIT14,99,188,40,14,ES_AUTOHSCROLL
+    LTEXT           "打底层数：",IDC_STATIC,35,191,41,8
+    EDITTEXT        IDC_EDIT18,121,208,40,14,ES_AUTOHSCROLL
+    LTEXT           "料桶1满时测距读数：",IDC_STATIC,36,210,77,8
+    EDITTEXT        IDC_EDIT19,204,170,40,14,ES_AUTOHSCROLL
+    LTEXT           "紧急温度：",IDC_STATIC,160,172,41,8
+    PUSHBUTTON      "清空热点信息",IDC_BUTTON3,268,207,54,14
+    EDITTEXT        IDC_EDIT20,122,226,40,14,ES_AUTOHSCROLL
+    LTEXT           "料桶2满时测距读数：",IDC_STATIC,36,227,77,8
+    EDITTEXT        IDC_EDIT21,122,242,40,14,ES_AUTOHSCROLL
+    LTEXT           "外圈压气阀值：",IDC_STATIC,36,244,57,8
+    CONTROL         "图像更新",IDC_CHECK_VISION,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,187,20,60,14
+END
+
+IDD_DIALOG_ORIG DIALOGEX 0, 0, 275, 209
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "参考点校正"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "保存",IDOK,157,188,50,14
+    PUSHBUTTON      "返回",IDCANCEL,217,188,50,14
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,30,261,98
+    PUSHBUTTON      "开始校正",IDC_BUTTON1,97,188,50,14
+    LTEXT           "参考点X:",IDC_STATIC,20,138,32,8
+    LTEXT           "参考点Y:",IDC_STATIC,146,138,32,8
+    EDITTEXT        IDC_EDIT1,75,138,53,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,201,138,53,14,ES_AUTOHSCROLL
+    LTEXT           "校正数据:",IDC_STATIC,27,16,36,8
+    GROUPBOX        "",IDC_STATIC,7,128,261,29
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,7,168,261,14
+END
+
+IDD_DIALOG_HEATDATA DIALOGEX 0, 0, 289, 351
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "温度数据"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST2,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,274,337
+END
+
+IDD_DIALOG_REALIMAGE DIALOGEX 0, 0, 401, 306
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "热点示意图"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_DIALOG_TONG_CALIB DIALOGEX 0, 0, 215, 244
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "桶圆心示教"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,13,33,185,175
+    LTEXT           "当前料桶编号:",IDC_STATIC,14,12,88,8
+    PUSHBUTTON      "添加",IDC_BUTTON1,80,218,50,14
+    PUSHBUTTON      "覆盖",IDC_BUTTON7,148,218,50,14
+END
+
+IDD_DIALOG_RADIAINFO DIALOGEX 0, 0, 175, 191
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "桶半径信息"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,12,23,156,141
+    LTEXT           "当前料桶编号:",IDC_STATIC,12,9,88,8
+    PUSHBUTTON      "添加",IDC_BUTTON1,21,170,50,14,NOT WS_VISIBLE
+    PUSHBUTTON      "删除",IDC_BUTTON7,105,169,50,14,NOT WS_VISIBLE
+END
+
+IDD_DIALOG_INPUT DIALOGEX 0, 0, 171, 122
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "输入"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,21,99,50,14
+    PUSHBUTTON      "取消",IDCANCEL,95,99,50,14
+    LTEXT           "序号：",IDC_STATIC,15,14,25,8
+    LTEXT           "高度：",IDC_STATIC,15,37,25,8
+    LTEXT           "半径：",IDC_STATIC,15,62,25,8
+    EDITTEXT        IDC_EDIT1,60,34,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,59,60,52,14,ES_AUTOHSCROLL
+    LTEXT           "",IDC_STATIC_NO,61,12,46,11
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_DIALOG_LOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 316
+        TOPMARGIN, 1
+    END
+
+    IDD_DIALOG_RUNSTATUS, DIALOG
+    BEGIN
+        RIGHTMARGIN, 309
+    END
+
+    IDD_DIALOG_CALIB, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 302
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 387
+    END
+
+    IDD_DIALOG_SETTING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 322
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 262
+    END
+
+    IDD_DIALOG_ORIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 268
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 202
+    END
+
+    IDD_DIALOG_HEATDATA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 282
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 344
+    END
+
+    IDD_DIALOG_REALIMAGE, DIALOG
+    BEGIN
+    END
+
+    IDD_DIALOG_TONG_CALIB, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 243
+    END
+
+    IDD_DIALOG_RADIAINFO, DIALOG
+    BEGIN
+    END
+
+    IDD_DIALOG_INPUT, DIALOG
+    BEGIN
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR 16, 15
+BEGIN
+    BUTTON      ID_VIEW_CONTROLBAR
+    BUTTON      ID_VIEW_LOGBAR
+    SEPARATOR
+    BUTTON      ID_VIEW_ADVCONFIG
+    BUTTON      ID_VIEW_CORRECTPARA
+    BUTTON      ID_VIEW_MASKTEPERATURE
+    BUTTON      ID_VIEW_DATA
+    BUTTON      ID_VIEW_CALIB
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    BUTTON      ID_VIEW_RADIACONFIG
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "保存温度文件(&S)",                  ID_FILE_SAVEDDT
+        MENUITEM "打开温度文件(&O)",                  ID_FILE_LOADDDT
+        MENUITEM SEPARATOR
+        MENUITEM "打印(&P)\tCtrl+P",              ID_FILE_PRINT
+        MENUITEM "打印预览(&V)",                    ID_FILE_PRINT_PREVIEW
+        MENUITEM "打印设置(&R)",                    ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                      ID_APP_EXIT
+    END
+    POPUP "查看(&V)"
+    BEGIN
+        MENUITEM "工具栏(&T)",                     ID_VIEW_TOOLBAR
+        MENUITEM "状态栏(&S)",                     ID_VIEW_STATUS_BAR
+        MENUITEM "操作面板(&)",                     ID_VIEW_CONTROLBAR
+        MENUITEM "日志栏(&L)",                     ID_VIEW_LOGBAR
+        MENUITEM "数据栏(&D)",                     ID_VIEW_DATA
+        MENUITEM "热点示意图(&C)",                   ID_VIEW_ADVCONFIG, INACTIVE
+        MENUITEM "桶圆心示教",                       ID_VIEW_CORRECTPARA
+        MENUITEM "半径调整",                        ID_VIEW_MENU_RADIAINFO
+        MENUITEM "温度数据(&M)",                    ID_VIEW_MASKTEPERATURE
+        MENUITEM "机器人校准参数配置(&B)",               ID_VIEW_CALIB
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "关于 ThermalImager(&A)",        ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\ooopic_1453445899.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "Thermal Imager\n\nTIC\nTIC Files (*.tic)\n.tic\nThermalImagerConfiguration\nThermal Imager Configuration"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "ThermalImager"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "打开本地配置文件\n打开"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "保存本地配置文件\n保存"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "保存当前视图\n截图"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_CONTROLBAR      "显示或隐藏操作面板\n操作面板"
+    ID_VIEW_LOGBAR          "显示或隐藏日志栏\n日志栏"
+    ID_VIEW_ADVCONFIG       "热点示意图\n热点示意图"
+    ID_VIEW_CORRECTPARA     "桶圆心示教\n桶圆心示教"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_MASKTEPERATURE  "使用或取消温度数据\n温度数据"
+    ID_FILE_SAVEDDT         "保存SDK可读取的温度文件"
+    ID_FILE_LOADDDT         "打开已保存的温度文件"
+    ID_VIEW_DATA            "显示或隐藏数据栏\n数据栏"
+    ID_VIEW_DATABAR         "显示或隐藏数据栏\n数据栏"
+    ID_VIEW_CALIB           "机器人校准参数配置\n校准修正参数"
+    ID_BUTTON32795          "桶圆心示教\n桶圆心示教"
+    ID_VIEW_RADIACONFIG     "半径调整\n半径调整"
+    ID_32797                "半径调整\n半径调整"
+    ID_VIEW_MENU_RADIAINFO  "半径调整\n半径调整"
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 英语(美国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG 0, 0, 261, 57
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About ThermalImager"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "ThermoX SDK Sample V2.1",IDC_STATIC,40,10,157,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2008-2013 Magnity Co., Ltd.",IDC_STATIC,40,25,169,8
+    DEFPUSHBUTTON   "OK",IDOK,204,7,50,14,WS_GROUP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 254
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 50
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_TICTYPE             ICON                    "res\\ThermoXSDKSampleDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,1,0,0
+ PRODUCTVERSION 2,1,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Magnity Co., Ltd"
+            VALUE "FileDescription", "ThermalImager MFC Application"
+            VALUE "FileVersion", "2, 1, 0, 0"
+            VALUE "InternalName", "ThermalImager"
+            VALUE "LegalCopyright", "Copyright (C) 2008"
+            VALUE "OriginalFilename", "ThermalImager.EXE"
+            VALUE "ProductName", "ThermalImager Application"
+            VALUE "ProductVersion", "2, 1, 0, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // 英语(美国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\ThermalImager.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

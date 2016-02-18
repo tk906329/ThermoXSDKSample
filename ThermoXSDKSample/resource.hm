@@ -1,0 +1,4 @@
+// Microsoft Developer Studio generated Help ID include file.
+// Used by ThermalImager.rc
+//
+#define HIDC_SG_EXPOSURE_EDIT           0x809d040e    // IDD_CAMERA_PROPERTIES_DIALOG
